@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papiya</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body id="backgroundColor">
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>Dear Yancy</strong>
+                        <p>
+                            I hope you're doing well. I wanted to let you know that I miss you so much. The memories we shared and the time we spent together still mean a lot to me. My feelings for you remain strong.
+                        </p>
+                        <pre>Take care always, 
+Aaron John
+                        </pre>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+    </div>
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+    <script>
+    VANTA.BIRDS({
+      el: "#backgroundColor",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      backgroundColor: 0x0,
+      color1: 0xff0086,
+      color2: 0xff0000
+    })
+    </script>
+</body>
+</html>
